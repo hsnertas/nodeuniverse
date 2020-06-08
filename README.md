@@ -16,4 +16,46 @@ One JS Page
 Server.js
 One JSON package
 Node Modules Folder
-DB folder with two SQL files
+
+# Psuedo code:
+
+
+## Setup and read data
+* npm init
+* npm install mysql inquirer
+* mysql connection/connect
+* prompt user - view department, view roles, view employees, exit
+* based on what they chose, call the appropriate function
+* view departments - select * from departments
+* view roles - select * from roles
+* view employees - select * from employee
+* exit - close connnection
+
+
+
+## Add data
+1. update initial prompt and ask use what they want to input
+2. add department
+*  a) ask the user for a name 
+*  b) insert name into department
+3. add role
+*  a) get all departments
+*  b) ask user which department
+*  c) ask the user for title and salary
+*  d) insert title, salary, department_id into role
+4. add employee
+*  a) get all roles
+*  b) ask user which role
+*  c) ask user for first_name, last_name
+*  d) insert first_name, last_name, role_id into employee
+
+
+
+## Update data
+1. update initial prompt by adding option to update employee's role
+2. update role
+*  a) get all employees
+*  b) get all roles
+*  c) ask user which employee
+*  d) ask user what's the new role
+*  e) update employee's role in the employee table
